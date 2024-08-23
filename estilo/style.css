@@ -218,12 +218,11 @@ input[type="checkbox"]:checked {
 
 /*Define uma margem direita específica para cada label, garantindo alinhamento adequado (html, css, php ... */
 .lab1{ 
-    margin-right:13px;
+    margin-right:12px;
 }
 
 .lab2{
     margin-right: 25px;
-
 }
 
 .lab3{
@@ -239,7 +238,7 @@ input[type="checkbox"]:checked {
 }
 
 .lab6{
-    margin-right:13px;
+    margin-right:10px;
 }
 
 .lab7{
@@ -255,7 +254,7 @@ input[type="checkbox"]:checked {
 }
 
 .lab10{
-    margin-right:14px;
+    margin-right:12px;
 }
 
 .lab11{
