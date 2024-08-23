@@ -365,7 +365,7 @@ input[type="submit"] {/*configuração do input enviar*/
     width: 1380px;/*define a largura da imagem*/
 }
 
-.O_projeto {/*estiliza a class "O_projeto"*/
+#O_projeto {/*estiliza a class "O_projeto"*/
     font-size: 30px; /* Define o tamanho da fonte */
     background: -webkit-linear-gradient(0.60turn, #34a1e6,#a3cce8 ); /* Adiciona um gradiente ao texto */
     -webkit-background-clip: text; /* Define que o gradiente será aplicado ao texto */
