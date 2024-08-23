@@ -1,0 +1,718 @@
+@charset "UTF-8";
+
+:root {
+    --azul: #1A7FBD;
+    --azul-light: #A4DCFF;
+    --preto: #000;
+    --branco: #FFF;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+    max-width: 100vw;
+    margin: 0; /*remove a margem padrão*/
+    padding: 0;/*remove preenchimento padrão*/
+    display: flex; 
+    box-sizing: border-box; /*preenchimento e bordas na largura e altura da página*/
+    flex-direction: column; /* organiza os elementos filho em coluna */
+    align-items: center; /*elementos filhos alinhados no centro horizontalmente*/
+    overflow-x: hidden; /*remove a barra de rolagem horizontal*/
+}    
+
+header {
+    background: var(--azul); /*cor de fundo */
+    padding: 10px 20px; 
+    align-items: center; 
+    justify-content: space-between;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Adiciona uma leve sombra ao header */
+}
+
+#netunologo {
+    padding: 5px 0 0 115px;/*distanciamneto do conteudo com a borda dele*/
+}
+
+nav {
+    display: flex; /*deixa todo o conteudo do nav na horizontal*/
+    font-size: 18px;/*tamanho da fonte dos links*/
+    align-items: center; /*links centralizados*/
+    justify-content: space-between; /*cria um espaço igual entre os links*/
+    width: 100vw;/*largura da nav dentro da viewport*/
+    border-bottom: 2px solid transparent;/*tamanho, solido e transparente a linha abaixo do nav*/
+    border-image: linear-gradient(0.3turn, transparent, rgba(255, 255, 255, 0.555), transparent);/*efeito gradiente dessa linha*/
+    border-image-slice: 1.5;/*Define a porção da imagem de borda a ser usada*/
+}
+
+nav a {
+    color: var(--branco); /*cor no texto dos links*/
+    padding: 10px; /*espaçamento em volta do link (fonte)*/
+    border-radius: 5px;/*borda arredondada em volta do link (fonte)*/
+    text-decoration: none;/*retira o sublinhado padrão do link*/
+    cursor: pointer;/*ao passar o mouse sobre o link muda o formato cria um formato de uma mão apontando*/
+    font-weight: bold;/*peso da cor, realsando a cor da fonte*/
+    transition-duration: 1s;/*cria um ao pausar o mouse na palavra em 1 segundo*/
+}
+
+nav a:hover {
+    background-color: var(--azul-light);/*a cor do efeito da transition-duration*/
+    color: #000;/*cor do link ao paousar o mouse sobre ele*/
+}
+
+.linknav {
+    display: flex;/*mantem os links alinhados na hotizontal*/
+    list-style-type: none;/*remove o marcador padrão quando utilizamos a teg de lista <li>*/
+}
+
+.linknav li {
+    margin-right: 30px;/*espaçamento a direita dos links da lista*/
+}
+
+.linknav li a:hover {
+    text-decoration: underline;/*adiciona um sublinhado nos links, do nav,  quando passa o mouse sobre ele*/
+}
+
+#buttproces {
+    padding: 11px 11px;/*prencimento interno do botão Processo Seletivo  - top 10px rigth 20px bottom 10px left 20px*/
+    font-size: 14px;/*tamanho da fonte do botão*/
+    margin-left: -5px;/*Adicionado margem do botão a sua esquerda*/
+    margin-right: 152px; /*Adicionado margem do botão a sua direita*/
+    background-color: var(--preto);/*cor de fundo do botão*/
+    text-align: center; /*fonte do botão centralizada*/
+    text-decoration: none;/*remove o sublinahdo do link desse botão*/
+    color: var(--branco);/*cor da fonte do botão*/
+    border-radius: 6px; /*tamnho da borda do botão*/
+    cursor: pointer; /*ao passar o mouse sobre o link muda o formato cria um formato de uma mão apontando*/
+    border: none; /*remove sobreados e borda do botão*/
+}
+
+#buttproces:hover {
+    text-decoration: underline; /*ao pausar o mouse no botão fica sombreado*/
+    background-color: #A4DCFF; /*muda a cor original do botão ao passar o mause sobre ele */
+    font-weight: bolder;
+    color: #000;/*altera a cor do texto do botão ao passar o mouse sobre ele*/
+    box-shadow: 0px 0px 15px 5px rgba(182, 179, 179, 0.6); /* Sombra mais grossa e brilhante */
+}
+
+main {
+    background-image: url(../imagens/bannertopo.png);/* caminho da imagem que está no fundo*/
+    background-repeat: no-repeat; /*impede que ela apareça duplicada*/
+    background-position-x: -200px;/*posição da imagem na horizontal*/
+    background-position-y: -80px;/*posição da imagem na horizontal*/
+    background-color: var(--azul);/*preenche a cor do fundo da imagem aonde ela se encontra*/
+    height: 1500px;/*define sua largura*/
+    width: 100vw;/*define a largura */
+    background-size: contain; /*Ajusta o tamanho da imagem de fundo para caber no contêiner.*/
+    margin: 0; /* Remove qualquer margem padrão */
+    padding: 0; /* Remove qualquer preenchimento padrão */
+    justify-content: center; /* Centraliza o conteúdo */
+    align-items: flex-start; /* Alinha o conteúdo ao topo */
+    flex-direction: column;
+}
+
+.form1 {
+    max-width: 350px; /* define largura máxima */
+    height: 600px; /* define a altura */
+    margin: 65px 140px 80px 95px; /* define as margens para um melhor posicionamento do formulário */
+    background-color: var(--branco); /* cor de fundo do formulário */
+    float: right; /* posicionamento do form1 a direita */
+    border-radius: 5px; /* bordas arredondadas de 5px */
+    box-shadow: 0 4px 20px rgba(214, 211, 211, 0.934); /* sombra mais suave e mais pronunciada */
+}
+  
+.form2 h2{
+    font-size: 20px;/*tamanho dessa fonte*/
+    color: #d1cfcf; /*cor da fonte*/
+    letter-spacing: 1.5px;/*espaçamento entre as letras da fonte*/
+    margin:10px 35px 0px 22px;/*posisionamento da fonte h1 (Formulário de Cadasto)*/
+}  
+
+.form2 p{
+    font-size: 11px; /*tamanho da fonte*/
+    color: var(--azul); /**/
+    font-weight: bold;
+    margin-left: 22px;
+    margin-top: 10px; 
+}
+
+.formfield1{
+    margin-left:20px;
+    margin-bottom: 10px;/*margem de baixo*/
+    padding: 5px 5px 5px 30px;/*espaçamento top left bottom e right*/
+    font-size: 13px; /*tamanho da fonte*/
+    background-repeat: no-repeat;/*para os ícones dentro do espaço input não se repita */
+    background-position:right; /* melhor posicionamento dos ícones*/
+    background-position-x: 5px;/*melhor posição dos ícones na horizontal*/
+    background-color: var(--branco);/*cor de fundo dos input*/
+    border-radius: 5px;/*arrendondamento da borda */
+    border: 1px rgb(206, 206, 206) solid;/*espeçura , cor e tipo da borda*/
+    width: 245px;/*largura do espaço para input dados*/
+}
+
+.formfield2{
+    margin-left: 20px;/*margem*/
+    margin-bottom: 10px;/*margem bottom*/
+    padding: 5px 5px 5px 30px; /*espaçamento top left bottom e right*/
+    font-size: 13px;/*tamanho da fonte*/
+    background-repeat: no-repeat;/*para os ícones dentro do espaço input não se repita */
+    background-position:right; /* melhor posicionamento do ícone estado*/
+    background-position-x: 5px;/*melhor posição do ícone na horizontal*/
+    background-color: var(--branco);/*cor de fundo do select*/
+    border-radius: 5px;/*arrendondamento da borda */
+    border: 1px rgb(206, 206, 206) solid;/*espeçura , cor e tipo da borda*/
+    width: 280px;/*largura do espaço para input dados*/
+}
+
+input[name="nome_completo"] {
+    background-image: url('../icones/user.png');
+    background-size: 17px 17px; /* tamanho do ícone */
+}
+
+input[name="email"] {
+    background-image: url('../icones/mail.png');/*ícone e-maiç*/
+    background-size: 17px 15px; /*definição do tamanho w/l*/
+}
+
+select[name="estado"]{
+    background-image: url('../icones/state.png');
+    background-size: 17px 17px;/*definição do tamanho w/l*/
+}
+
+.select{
+    width: 350px;/*lagura contêiner*/
+    height: 150px;/*altura do contêiner*/
+    display: block; /*define o contêiner como um bloco*/
+    font-size: 12px;
+    background-color: var(--azul);
+    color:var(--branco)
+}
+
+.select h2{
+    font-size: 15px;
+    color: var(--branco);
+    text-align: center;/*texto centralizado*/
+    padding-top: 20px;
+}
+
+.selectlinguagens{
+    width: 320px;/*define a largura que fazem parte dessa classe*/
+    margin-left: 30px;/*Define a margem esquerda*/
+    margin-top: 13px;/*Define a margem superior*/
+}
+
+input[type="checkbox"] {/*estilização das cxs de seleção (checkbox)*/
+    width: 9px;/*largura*/
+    height: 9px;/*altura*/
+    outline: 2px solid var(--branco);/*contorno branco*/
+    outline-offset: 2px;/*Define o deslocamento do contorno.*/
+    appearance: none;/*remove o estilo padrão do checkbox*/
+    border-radius: 1.1px;/*arredondamento dos cantos do checkbox*/
+    margin-top: 9px; /*margem superior*/
+}
+
+input[type="checkbox"]:hover{
+    cursor: pointer; /*cursor altera para uma mão, indicando que o elemento é clicável*/
+}
+
+input[type="checkbox"]:checked {
+    background-color: var(--branco);/*ao clicar a o fundo da checkbox fica branco*/
+}
+
+/*Define uma margem direita específica para cada label, garantindo alinhamento adequado (html, css, php ... */
+.lab1{ 
+    margin-right:13px;
+}
+
+.lab2{
+    margin-right: 25px;
+
+}
+
+.lab3{
+    margin-right: 32px;
+}
+
+.lab4{
+    margin-right: 10px;
+}
+
+.lab5{
+    margin-right: 19px;
+}
+
+.lab6{
+    margin-right:13px;
+}
+
+.lab7{
+    margin-right:11px;
+}
+
+.lab8{
+    margin-right:16px;
+}
+
+.lab9{
+    margin-right:16px;
+}
+
+.lab10{
+    margin-right:14px;
+}
+
+.lab11{
+    margin-right:20px;
+}
+
+.trabal_anterior{ /*Estilização da class trabal_anterior*/
+font-size: 13px;/*fonte do texto*/
+font-weight: bold;
+color: var(--azul);/*cor no texto*/
+padding-left: 28px; /*espaçamento mais a esquerda*/
+margin-top: 15px;
+}
+
+input[name="resposta"]{/*estilização dos botões não/sim (radio buttons)*/
+    width: 10px;/*largura*/
+    height: 10px;/*altura*/
+    outline: 2px solid #1A7FBD; /*contorno da cor #1A7FBD*/
+    outline-offset: 2px;/*deslocamento para "fora" do contorno que está em #1A7FBD do radio buttom*/
+    appearance: none;/*remove o estilo padrão do radio buttom*/
+    border-radius: 1px;/*arredondamento dos cantos do botão*/
+    margin-left: 30px;/*alinhamento da margem esquerda*/
+}
+
+input[name="resposta"]:hover{
+    cursor:pointer;/*estilo do cursor para uma mão*/
+}
+
+input[type="radio"]:checked {
+    background-color: var(--azul);/*quando selecionado a cor de  fundo muda para #1A7FBD*/
+}
+
+.opcao{/*tamanho da fonte das opções (não / sim) */
+    color: #5957579e;
+    font-size: 14px;
+}
+
+.campo{
+    font-size: 12px;/*tamanho da fonte*/
+    font-weight: bolder;
+    color: var(--azul);/*cor fonte*/
+    text-align: center;/*o paragrafo (*) Campo obrigatório fica centralizado*/
+    margin-top: 3px;/*margem superior desse páragrafo*/
+}
+
+.campo_obr{/*estelização da class campo obrigatório (as margems0*/
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-top: 15px;
+}
+
+input[type="submit"]:hover{
+    cursor:pointer;/*alteração no estilo do cursor*/
+    font-weight: bolder;/*muda o "peso" da cor do texto ao pausar o mouse sobre esse input */
+    font-size: 16px;/*ao pausar o mouse sobre o enviar aumenta seu tamnho*/
+    box-shadow: 0px 0px 20px 5px rgb(26, 127, 189, 0.6); /* efeito de brilho ao redor do bloco */
+    transform: scale(1); /* faz o bloco parecer que está vindo para frente */
+    cursor: pointer;
+}
+
+input[type="submit"] {/*configuração do input enviar*/
+    width: 330px;/*largura*/
+    margin-left: 10px;/*margem esquerda*/
+    margin-top: 13px;/*margem superior*/
+    padding: 12px 0;/*preencimento interno top 12px, right 0px, bottom 12px, rigth 0 */
+    border-radius: 4px;/*arredondamento o imput enviar*/
+    font-size: 16px;/*tamanho a fonte do value enviar*/
+    background-color: var(--azul);/*sua cor de fundo*/
+    text-align: center;/*alinhamento da fonte centralizado*/
+    color: var(--azul);/*cor da fonte enviar*/
+    border: none; /*retira a borda padrão */   
+ }
+
+.politica_priv{/*estilização do parágrafo dessa classe*/
+    text-align: center;/*centralizado*/
+    font-size: 10px;/*tamanho da fonte*/
+    color: rgb(186, 185, 185);/*cor da fonte*/
+    margin-left: 15px;/*margem esquerda do paragrafo*/
+    margin-right: 15px; /*margem direita do paragrafo*/
+}
+
+.mensagem-sucesso {/*mensagem e estilização após clicar em enviar dentro do formulário*/
+    color: rgb(140, 62, 62);
+    font-weight: bolder;
+    display: none;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.secao1{
+    width:100%;/*largura da seção*/
+    height: 400px; /*altura*/
+    margin-bottom: 10px; /* Adiciona um espaço abaixo da seção */
+    display: inline-flex; /* Define um layout flexível em linha para o conteúdo da seção */
+    margin-top: 50px; /* Adiciona um espaço acima da seção */
+    background-position-x: 50px; /* Posiciona o plano de fundo 50px à direita (horizontal)*/
+}
+
+.imagem_secao1{ /* Estiliza a imagem dentro da primeira seção */
+    height: 500px;
+    background-image: url('../imagens/dev.png');/*iamgem de fundo*/
+    background-size:contain;/*redimenciona a imagem de fundo para caber no local*/
+    background-color: var(--azul);/*cor de fundo*/
+    background-repeat: no-repeat;/*não permite que a imagem de fundo(dev.png) apareça duplicada*/
+    margin-top: 130px;/*adiciona espaço acima da imagem*/
+    margin-left: 10px;/*adiciona espaço à esquerda da imagem*/
+    width: 1380px;/*define a largura da imagem*/
+}
+
+.O_projeto {/*estiliza a class "O_projeto"*/
+    font-size: 30px; /* Define o tamanho da fonte */
+    background: -webkit-linear-gradient(0.60turn, #34a1e6,#a3cce8 ); /* Adiciona um gradiente ao texto */
+    -webkit-background-clip: text; /* Define que o gradiente será aplicado ao texto */
+    -webkit-text-fill-color: transparent; /* Torna a cor de preenchimento do texto transparente */
+}
+
+.secao1texto{ /* Estiliza o texto na primeira seção */
+    width: 474px;/*largura do texto*/
+    text-align: justify;/*justifica o texto*/
+    margin-right: 150px;/*espaço a direita do texto*/
+    margin-top: 50px;/*adiciona um espaço acima do texto*/
+    font-size: 16px;/*tamanho da fonte*/
+    font-weight: normal;/*"peso" do negrito da fonte*/
+    float: right;/*alinha o texto a direita*/
+    color: var(--branco);/*cor do texto*/
+}
+
+.secao2{ /* Estiliza a segunda seção da página */
+    background-color: var(--branco); /* Define a cor de fundo como branco */
+    width: 100vw; /* Define a largura como 100% da largura da janela de visualização */
+    height: 600px; /* Define a altura da seção */
+    display: inline-flex; /* Define um layout flexível em linha para o conteúdo da seção */
+    margin-top: 50px; /* Adiciona um espaço acima da seção */
+}
+
+
+.O_problema{ /* Estiliza o conteúdo dentro da segunda seção com a classe "O_problema" */
+    width:1200px;/*largura do conteúdo*/
+    padding-right: 60PX;/*adiciona um preenchimento à direita do conteúdo*/
+}
+
+.imagem_secao2{ /* Estiliza a imagem dentro da segunda seção */
+    height: 550px;/*DEfinição da altura da imagem Container2*/
+    background-image: url('../imagens/Container2.png');/*Caminho da imagem*/
+    background-size:contain; /*Faz com que a imagem Container de adapte dentro da sua área*/
+    background-repeat: no-repeat;/*impede que a imagem se duplique*/
+    background-position-x:100px; /* Posiciona o plano de fundo 100px à direita (eixo horizotal) */
+    margin-top: 6px; /*Adiciona um espaço acima da imagem*/
+}
+
+.secao2_paragr1{ /* Estiliza o primeiro parágrafo na segunda seção */
+    margin-left: 20px;/*Adiciona um espaço de 20px à esquerda do parágrafo*/
+    margin-top: 17px; /*Adiciona um espaço de 17px à acima do parágrafo*/
+    float: right; /*alinha o parágrafo a esquerda*/
+    font-size: 14px;/*Define o tamanho da fonmte*/
+    color: var(--preto); /*define a cor da fonte do parágrafo*/
+    width: 450px; /*largura do parágrafo*/
+}
+
+#O_problema{ /* Estiliza o título com ID "O_problema" */
+    font-size: 30px; /* Define o tamanho da fonte */
+    background: -webkit-linear-gradient(0.75turn, #34a1e6,#a3cce8 ); /* Adiciona um gradiente ao texto */
+    -webkit-background-clip: text; /* Define que o gradiente será aplicado ao texto */
+    -webkit-text-fill-color: transparent; /* Torna a cor de preenchimento do texto transparente */
+  
+}
+
+.secao2_paragr1{
+    font-size: 20px;
+    font-weight: bolder;
+    margin-left: 12px; /* Adiciona um espaço à esquerda do parágrafo */
+    margin-top: 7px  /* Adiciona um espaço acima do parágrafo */
+}
+.secao2_paragr2{
+    font-size: 17px;
+    
+}
+.secao2paragr3{
+    font-size: 15px;
+    font-weight: bolder;
+}
+
+.a_empresa{
+    margin: 0 100px 0 100px; /* Adiciona espaços à esquerda e à direita da seção */
+    width: 100%; /* Define a largura como 100% do elemento pai */
+    height: 400px; /* Define a altura da seção */
+    clear: both; /* Evita que elementos flutuantes afetem a seção */
+    transform: translateY(90px); /* Move a seção 90px para baixo (na vertical) */
+    text-align: center; /* Alinha o conteúdo da seção ao centro */
+}
+
+.a_empresa1{
+    width: 300px; /*largura do elemento*/
+    height: 150px; /*altura do elemento*/
+    margin: 30px 5px 0 5px; /*apenas as margens esquerda e direita com 5px */
+    padding: 35px;/*preenchimento interno do elemento*/
+    background-color: var(--branco);/*fundo branco*/
+    float: left; /*alinha o elemento à esquerda*/
+    border-radius: 12px;/*bordas arrendondadasa em 12px*/
+    box-shadow:  0px 20px 68px -43px #0505057a; /*adiciona uma sobra ao redor dos elementos para ficarem melhor destacados*/
+}
+
+.a_empresa1:hover { 
+    box-shadow: 0px 0px 20px 5px rgba(34, 109, 155, 0.5); /* suaviza o brilho */
+    transform: scale(1.05); 
+    cursor: text;
+}
+
+.jornada {/* Estiliza a seção "Jornada" */
+    background-color: var(--branco); /* Define a cor de fundo como branco */
+    width: 100%; /* Define a largura como 100% do elemento pai */
+    height: 800px; /* Define a altura da seção */
+    margin-top: 0px; /* Remove o espaço acima da seção */
+}
+
+.jornada h2 {
+    font-size: 30px; /* Define o tamanho da fonte */
+    background: -webkit-linear-gradient(0.90turn, #1A7FBD, #A4DCFF); /* Adiciona um gradiente ao texto */
+    -webkit-background-clip: text; /* Define que o gradiente será aplicado ao texto */
+    -webkit-text-fill-color: transparent; /* Torna a cor de preenchimento do texto transparente */
+    text-align: center; /* Alinha o texto ao centro */
+    margin-top: 200px; /* Adiciona um espaço acima do texto */
+    display: inline-block; /* Exibe o texto como um bloco em linha */
+}
+
+.jornadadiv{ /* Estiliza a div dentro da seção "Jornada" */
+    margin: auto; /* Centraliza a div horizontalmente */
+    width: 1000px; /* Define a largura da div */
+    height: 800px; /* Define a altura da div */
+}
+
+.imgjornada{ /* Estiliza a primeira imagem dentro da seção "Jornada" */
+    display: inline-block; /* Define o elemento como inline-block para permitir margens e tamanho */
+    width: 400px; /* Define a largura da imagem */
+    transform: rotate(180deg); /* Rotaciona a imagem em 180 graus */
+    margin-right: 10px; /* Adiciona margem à direita da imagem */
+}
+
+.topicosjornada{ /* Estiliza a seção de tópicos dentro da seção "Jornada" */
+    height: 200px; /* Define a altura da seção */
+    margin-top: 30px; /* Adiciona margem superior */
+    padding-left: 47px; /* Adiciona padding à esquerda para espaçamento interno */
+}
+
+.jornadaitens{ /* Estiliza os itens individuais dentro da seção "Jornada" */
+    width: 300px; /* Define a largura dos itens */
+    height: 80px; /* Define a altura dos itens */
+    margin: 8px 8px 0 0; /* Adiciona margens ao redor dos itens */
+    padding: 0px; /* Remove padding interno */
+    background-color: var(--azul); /* Define a cor de fundo dos itens */
+    border-radius: 12px; /* Arredonda os cantos dos itens */
+    float: left; /* Alinha os itens à esquerda */
+    border: 1px var(--branco) solid; /* Adiciona uma borda branca sólida */
+    box-shadow: 5px 10px 100px #b4b4b5; /* Adiciona sombra aos itens */
+    display: flex; /* Define o contêiner como flexbox */
+    align-items: center; /* Centraliza verticalmente os itens dentro do flexbox */
+    justify-content: flex-start; /* Alinha os itens à esquerda dentro do flexbox */
+}
+
+.jornadaimg {  /* Estiliza a imagem dentro dos itens na seção "Jornada" */
+    margin: 10px; /* Adiciona margem ao redor da imagem */
+    width: 60px; /* Define a largura da imagem */
+    height: 60px; /* Define a altura da imagem */
+    background-color: var(--branco); /* Define a cor de fundo da imagem */
+    border-radius: 10px; /* Arredonda os cantos da imagem */
+    display: inline-block; /* Define o elemento como inline-block */
+    position: relative; /* Define o posicionamento como relativo, permitindo a sobreposição */
+}
+
+.jornadaimg img {
+    width: 100%; /* Faz com que a imagem ocupe todo o contêiner */
+    height: auto; /* Mantém a proporção da imagem */
+    transform: scale(0.7); /* Reduz o tamanho da imagem para 70% do tamanho original */
+}
+
+.jornadatexto{
+    width: 200px; /*largura da caixa de texto*/
+    margin: 0; /*remove as margens do texto*/
+    font-size: 14px; /*tamanho da fonte*/
+    color: var(--branco); /*sua cor*/
+    text-align: left;/*texto alinghado a esquerda*/
+    display: inline-block;/*modo de exibição como bloco inline */
+}
+
+.Vector1{
+    float: right;/*alinha o vetor à direita */
+    margin-right: 400px;/*sua margem definida a direta*/
+}
+
+.jornadadiv a{/*link quero me cadastrar ("botão")*/
+    width: 340px;/*define sua*/
+    height: 20px;/*sua altura*/
+    padding: 17px 20px 17px 25px; /*espaçamento nesse link */
+    font-size: 14px;/*tamanho da fonte*/
+    background-color: #000;/*cor de fundo*/
+    text-align: center;/*alinhamento centralizado*/
+    text-decoration: none;/*eleimina o sublinhado do link*/
+    color: var(--branco); /*cor da fonte do texto Quero me cadastrar para o...*/
+    border-radius: 7px;/*arrendondamento das bordas*/
+    cursor: pointer;/*muda o formato do cursor do mouse ao passar sobre o link*/
+    margin: 100px auto 15px 315px;/*margens do link*/
+    display: inline-flex; /*define a forma de exibição como em linha e flexível*/
+    font-weight: bold;
+}
+
+.jornadadiv a:hover{
+    box-shadow: 0px 0px 20px 5px rgba(29, 61, 173, 0.4); /* efeito de brilho ao redor do bloco */
+    transform: scale(1.05); /* faz o bloco parecer que está vindo para frente */
+    border: 2px solid #141313; /* borda branca ao redor do bloco */
+    cursor: pointer;
+}
+
+.processo_seletivo{
+    color:#1A7FBD; /*cor da fonte Processo Seletivo*/
+    margin-left: 5px;/*desloca a margem à esquerda*/
+}
+
+.objetivo{
+    height: 500px; /*altura*/
+    width:100%; /*largura em 100% dessa seção*/
+    background-color: var(--azul); /*cor de fundo*/
+    padding-top: 1px; /*espaçamento superior do texto em 1px*/
+}
+
+.objetivo h3{ /*estilização da palavras (Objetivos) */
+    font-size: 35px;/*tamanho da fonte */
+    color: var(--branco);/*sua cor*/
+    text-align: center; /*fica centralizada*/
+    margin-top: 80px;/*margem superior de 80px*/
+    transition: all 0.3s ease; /* transição suave para o efeito hover */
+}
+
+.objetivo h3:hover { /* efeito ao passar o mouse */
+    text-shadow: 0px 0px 8px rgba(255, 255, 255, 0.63); /* brilho ao redor do texto */
+    transform: scale(1.1); /* aumenta o tamanho do texto */
+    color: #ecece4ef; /* altera a cor do texto para dourado */
+    cursor:text;
+}
+
+.objetivodiv{
+    margin-left: 230px; /*define a margem à esquerda para os contêiner dos blocos*/
+}
+
+.objetivodiv1{ /*estilização das div objetivos*/
+    width: 250px;/*largura*/
+    height: 170px;/*altura*/
+    background-color:var(--branco);/*cor de fundo*/
+    margin: 0 4px 0 4px;/*margens ao redor do bloco com o texto*/
+    text-align: center; /*textes centralizados*/
+    float:left;  /*define os blocos ao seu lado um do outro*/  
+    border-radius: 7px;/*bordas do bloco redondadas*/
+    font-size: 15px;/*tamanho do texto*/
+    padding: 18px; /*espaçamento interno do texto*/
+    box-shadow: 20px 10px 75px -25px #262525e5;/*sombra em volta dos blocos*/
+    transition: all 0.3s ease; /* transição suave para o efeito hover */
+}
+
+.objetivodiv1:hover { /* efeito ao passar o mouse */
+    box-shadow: 0px 0px 20px 5px rgba(255, 255, 255, 0.8); /* efeito de brilho ao redor do bloco */
+    transform: scale(1.05); /* faz o bloco parecer que está vindo para frente */
+    border: 2px solid var(--branco); /* borda branca ao redor do bloco */
+    cursor: text;
+}
+
+.footer{/*estilização geral do footer*/
+    background-color: var(--preto);/*cor de fundo*/
+    margin: 0 auto; /*posiciona o footer no centro*/
+    padding: 70px 0; /*Adiciona preenchimento um espaçamento apenas no topo e na parte inferior do footer */
+    width: 1350px; /*largura footer*/
+    height: 120px; /*altura footer */
+    display: inline-flex; /*permite que os itens dentro do footer sejam melhor posicionados*/
+}
+
+.footerdiv{/*Estiliza os contêineres dentro do rodapé.*/
+    width:230px; /*Define a largura de cada contêiner dentro do rodapé.*/
+    margin-left: 250px; /*adiciona margem esquerda para distanciar os contêineres*/
+}
+
+.slogan{ /*Estiliza o elemento de slogan no rodapé.*/
+    width: 200px;/*defina a largura da img slogan*/
+    height: auto; /*ajusta sua altura automaticamente*/
+}
+
+.icononefooter{/*Estiliza os ícones no rodapé.*/
+    padding: 0; /*remove o preenchimento padrão dos ícones*/
+    margin: 10px 0; /*adiciona uma margem de 10px apenas na parte superior e inferior*/
+}
+
+.icononefooter li{ /*Estiliza cada item da lista de ícones.*/
+    display: inline-block; /*Exibe os itens da lista em linha, mas permite definir larguras e alturas.*/
+    margin-right: 4px;/*adiciona uma margem a direita dos ícones de 4px*/
+}
+
+.icononefooter img{ /*Estiliza as imagens dos ícones.*/
+    width: 20px;
+    height: 20px;
+}
+
+.textofooter{ /*Estiliza o texto no rodapé.*/
+    color: #C3C3C3;
+    font-size: 9px;
+}
+
+.footer button{ /*Estiliza o botão (Processo Seletivo) no rodapé.*/
+    font-size: 18px; /*tamanho da fonte do botãp*/
+    font-weight: bold;/*"peso" do negrito da fonte*/
+    height: 45px;/*altura do botão*/
+    width: 190px; /*largura*/
+    border-radius: 6px;/*arredondamento das bordas*/
+    border: none;/*elimina sombreados ao contorno do botão*/
+    cursor: pointer;/*define o tipo de cursor ao passar o mouse sobre o botão*/
+}
+
+.buttom{/*estilização do botão processo seletivo*/
+    margin-left: 60px;/*adiciona uma margem a esqueda do botão para ficar mais distante do slogan*/
+}
+
+.buttom :hover{
+box-shadow: 0px 0px 20px 5px rgba(255, 255, 255, 0.4); /* efeito de brilho ao redor do bloco */
+transform: scale(1.05); /* faz o bloco parecer que está vindo para frente */
+border: 2px solid var(--branco); /* borda branca ao redor do bloco */
+cursor: text;
+}
+
+.listafooter{ /*Estiliza as listas no rodapé (O Projeto/O Problema/Sua Jornada/Objetivos.*/
+    margin-top: 0;/*remove margem padrão da lista*/
+    margin-right: 10px;/*adiciona margem a direita*/
+    padding-right: 30px;/*adiciona preenchiemtno interno */
+    display: list-item;/*exibe a os itens como uma lista (vertical)*/
+    list-style-type: none; /*remove os marcadores padrão de lista*/
+    border-right: 2px white solid;/*insere uma linha vertical de 2px branca sólida a direita da lista */
+    font-size: 12px;
+}
+
+.listafooter li a{ /*Estiliza os links dentro dos itens da lista.*/
+    text-decoration: none; /*remove o sublinhado padrão do link*/
+    margin-bottom: 15px;/*margem inferior entre dos links*/
+    color:var(--branco); /*cor da fonte*/
+    display: block;/* faz os links ocupar toda a largura disponível do seu espaço*/
+}
+
+.listafooter li a:hover{/*estilização dos links ao passar o mouse*/
+    text-decoration: underline; /*adiciona um subliando apenas quando passar o mouse sobre o link*/
+}
+
+.footer p{ /*Estiliza os parágrafos no rodapé.*/
+    color:var(--branco);/*cor dp parágrafo*/
+    margin-top: 0px;/*remove margem superior do parágrafo*/
+}
+
+.contato{/*Estiliza a seção de contato no rodapé.(tel. e e-mail) */
+    margin-left: 30px; /*inseri margem a esquedar de 35px*/
+    font-size: 15px;/*tamanho da fonte*/
+}
+
+.contato a{ /*estiliza os links contato (tel. e e-mail)*/
+    color:var(--branco); /*cor dda fonte do link contato*/
+    margin-bottom: 5px; /*define margem inferior entre esses links*/
+    text-decoration: none;/*remove o sublinhado padrão dos links*/
+}
